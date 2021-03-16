@@ -21,7 +21,7 @@ The decisions I make to develop the solution are:
 
 The [CompareText.py](https://github.com/mikesh13/Fetch_Rewards/blob/main/CompareText.py) file contains a class for the comparison.
 The comparison starts by createing a class object.
-```
+```python
 from CompareText import CompareTxt
 
 txt1 = 'I like you.'
@@ -31,7 +31,7 @@ comparison = CompareTxt(txt1, txt2)
 ```
 
 Next, you want to make the comparison:
-```
+```python
 # Default longest_n_gram = 3
 comparison.compare()
 
@@ -40,13 +40,13 @@ comparison.compare(5)
 ```
 
 If you want to change the weight:
-```
+```python
 # New weight must have the same length as the old one, and it must sum up to 1.
 comparison.change_weight([0.1, 0.3, 0.6])
 ```
 
 To check the similarity_score:
-```
+```python
 print(comparison.get_similarity_score())
 ```
 
