@@ -1,3 +1,9 @@
+'''
+Author: Micheal Shieh
+Date: 3/12/2021
+
+This file contains the code for the web service to perform the comparison.
+'''
 from flask import Flask, render_template, request
 from config import DevConfig
 from CompareText import CompareTxt
