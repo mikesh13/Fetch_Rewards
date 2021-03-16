@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, flash, session
+from flask import Flask, render_template, request
 from config import DevConfig
 from CompareText import CompareTxt
 
