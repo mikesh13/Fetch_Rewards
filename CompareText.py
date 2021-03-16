@@ -118,7 +118,16 @@ class CompareTxt:
         By calling this function,
         it will calculate and return a similarity score of the two texts.
 
+        bp stands for 'Brevity Penalty', which compares the length of two texts.
+        This number serves as a penalty if the content is shorter than the template,
+        so even if the template contains the whole content as part of the text,
+        it will not be a 100% match.
         
+        By summarize the score for each n-grams with the its weight,
+        it will return a number between 0 and 1
+        
+        I utilize some math using logarithm and exponential function
+        to keep the score will be a positive number smaller than 1.
 
         If the two texts have no words in common, it will return 0
         '''
@@ -139,6 +148,14 @@ class CompareTxt:
 
     
     def change_weight(self, new_weight):
+        '''
+        new_weight: a list of fractions, which represent the users' preference for the weight of each n-grams.
+        
+        This funtion takes on a list of fractions as new weight and replace the old weight
+        if the new weights satisfy these critiria:
+         - The length of new weight is the same as old weight.
+         - The sum of new weight equals to one.
+        '''
         if len(new_weight) == len(self.weight) and sum(new_weight) == 1:
             self.weight = new_weight
         else:
@@ -146,6 +163,13 @@ class CompareTxt:
 
 
     def log(self, x):
+        '''
+        x: a number
+        
+        This function takes a number and returns another number, which is log(x).
+        
+        If x is 0, return -1
+        '''
         if x == 0:
             return -1
 
