@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form action = "http://localhost:5000/compare_text" method = "post">
+    	<div>
+    		<h1>Welcome to the webpage where you can calculate how similar your texts are.</h1>
+    	</div>
+    	<div>
+    		<p>
+    			This algorithm is a simplified version of Bilingual Evaluation Understudy (BLEU).
+    			It will return a number between 0 and 1, 0 as completely different and 1 as identical.
+    		</p>
+    	</div>
+    	<div>
+    		<p>
+    			The genreral idea is to compare two texts by different length of words in order.
+    			For example, it will first compare using 1-gram(one word at a time), then 2-gram(two words at a time).
+    			Therefore, the similarity score between "I love you." and "I like you." is . 
+    			The number is calculated using the longest n-grams to be 3.
+    		</p>		
+    	</div>
+    	<div>
+    		<p>Press "Continue" below to input you texts.</p>
+      		<p><input type = "submit" value = "Continue" /></p>
+    	</div>
+    </form>
+</body>
+</html>
