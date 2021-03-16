@@ -17,3 +17,14 @@ The decisions I make to develop the solution are:
   * The default n is 3 for the n-grams.
   * The default assumption is all n-grams weight the same, but user can change the weight based on thier preferences.
 * I did not use any library for the comparison, but I did use Flask to build a web service. 
+
+
+The [CompareText.py](https://github.com/mikesh13/Fetch_Rewards/blob/main/CompareText.py) file contains a class for the comparison.
+```
+from CompareText import CompareTxt
+
+txt1 = 'I like you.'
+txt2 = 'I love you.'
+
+comparison = CompareTxt(txt1, txt2)
+```
